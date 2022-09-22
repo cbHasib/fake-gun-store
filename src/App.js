@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import AllGuns from "./components/AllGuns/AllGuns";
+import Header from "./components/Header/Header";
 
 function App() {
+
+  const [cartCount, setCartCount] = useState(0);
+  const cartIncrease = () => setCartCount(cartCount+1);
+
+  const [initPrice, setTotalPrice] = useState(0);
+  const totalPrice = (newPrice) => setTotalPrice(initPrice + newPrice);
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header cartCount={cartCount} price={initPrice}/>
+      <AllGuns cartIncrease={cartIncrease} totalPrice={totalPrice}/>
     </div>
   );
 }
