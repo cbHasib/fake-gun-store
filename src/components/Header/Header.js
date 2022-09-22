@@ -7,7 +7,7 @@ const Header = ({cartCount, price}) => {
       <div className="navbar bg-base-100 shadow-lg lg:px-20">
         <div className="flex-1">
           <a href="/" className="btn btn-ghost normal-case text-2xl">
-            FakeGunStore
+            Fake<span className="text-orange-600">Gun</span>Store
           </a>
         </div>
         <div className="flex-none">
