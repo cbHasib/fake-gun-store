@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import AllGuns from "./components/AllGuns/AllGuns";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <div className="App">
       <Header cartCount={cartCount} price={initPrice}/>
       <AllGuns cartIncrease={cartIncrease} totalPrice={totalPrice}/>
+      <Footer />
     </div>
   );
 }
