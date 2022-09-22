@@ -10,7 +10,7 @@ const Gun = (props) => {
 
   return (
     <div>
-      <div className="card w-full bg-base-100 shadow-xl">
+      <div className="dark:bg-slate-700 dark:text-white card w-full bg-base-100 shadow-xl">
         <figure>
           <img className="w-full h-64 object-contain" src={img} alt={name} />
         </figure>

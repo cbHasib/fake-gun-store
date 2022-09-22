@@ -1,15 +1,19 @@
 import React from "react";
+import DarkMode from "../DarkMode/DarkMode";
 import "./Header.css";
 
-const Header = ({cartCount, price}) => {
+const Header = ({ cartCount, price }) => {
   return (
     <div>
-      <div className="navbar bg-base-100 shadow-lg lg:px-20">
+      <div className="navbar bg-base-100 dark:bg-slate-900 dark:text-white shadow-lg lg:px-20">
         <div className="flex-1">
           <a href="/" className="btn btn-ghost normal-case text-2xl">
             Fake<span className="text-orange-600">Gun</span>Store
           </a>
         </div>
+
+        <DarkMode e={this}/>
+
         <div className="flex-none">
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -28,14 +32,16 @@ const Header = ({cartCount, price}) => {
                     d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                   />
                 </svg>
-                <span className="badge badge-sm indicator-item">{cartCount}</span>
+                <span className="badge badge-sm indicator-item dark:bg-white dark:text-slate-900">
+                  {cartCount}
+                </span>
               </div>
             </label>
             <div
               tabIndex={0}
               className="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow"
             >
-              <div className="card-body">
+              <div className="card-body dark:bg-slate-900">
                 <span className="font-bold text-lg">{cartCount} Items</span>
                 <span className="text-info">Subtotal: ${price}</span>
                 <div className="card-actions">
@@ -54,12 +60,14 @@ const Header = ({cartCount, price}) => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 dark:bg-slate-900"
             >
               <li>
                 <a href="/" className="justify-between">
                   Profile
-                  <span className="badge">New</span>
+                  <span className="badge dark:bg-white dark:text-slate-900">
+                    New
+                  </span>
                 </a>
               </li>
               <li>

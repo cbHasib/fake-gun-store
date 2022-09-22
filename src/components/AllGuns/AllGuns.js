@@ -11,12 +11,12 @@ const AllGuns = ({ cartIncrease, totalPrice }) => {
       .then((data) => setGunsData(data));
   }, []);
   return (
-    <div>
-      <h1 className="text-center text-4xl my-5 font-bold">
+    <div className="dark:bg-slate-800">
+      <h1 className="text-center text-4xl py-5 font-bold dark:text-white">
         Fake <span className="text-orange-600 no-underline">Gun</span> Store
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 lg:gap-10 w-[85%] mx-auto my-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 lg:gap-10 w-[85%] mx-auto py-10">
         {gunsData.map((gun) => (
           <Gun
             gun={gun}
